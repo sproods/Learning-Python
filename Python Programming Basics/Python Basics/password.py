@@ -7,6 +7,7 @@ while True:
 
     if yourPassword != password:
         a += 1
+        # continue          # Esta declaración hace que vuelva al inicio sin pasar por el último if.
     else:
         break
 
