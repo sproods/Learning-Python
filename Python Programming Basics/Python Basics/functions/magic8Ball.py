@@ -22,3 +22,6 @@ def getAnswer(answerNumber):
 r = random.randint(1, 9)
 fortune = getAnswer(r)
 print(fortune)
+
+# las últimas tres líneas simplificadas en una sola:
+print(getAnswer(random.randint(1, 9)))
