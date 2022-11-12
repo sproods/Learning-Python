@@ -7,17 +7,24 @@ def collatz(number):
         return 3 * number + 1
 
 # Programa principal.
-print('Digite un número entero, por favor:')
-N = int(input())
+# print('Digite un número entero, por favor:')
+# N = int(input())
 
-print('\nSECUENCIA DE COLLATZ:\n')
+try:
+    print('Digite un número entero, por favor:')
+    N = int(input())
 
-print(N)
-while True:
-    ans = collatz(N)
-    print(ans)
+    print('\nSECUENCIA DE COLLATZ:\n')
 
-    if ans == 1:
-        break
+    print(N)
+    while True:
+        ans = collatz(N)
+        print(ans)
 
-    N = collatz(N)          # la variable 'N' ahora toma el valor obtenido de 'collatz(N)'.
+        if ans == 1:
+            break
+
+        N = collatz(N)          # la variable 'N' ahora toma el valor obtenido de 'collatz(N)'.
+except ValueError:
+    print('Este no es un número entero.\nInténtelo nuevamente, por favor.')
+
