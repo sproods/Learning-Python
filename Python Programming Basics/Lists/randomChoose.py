@@ -13,8 +13,17 @@ while True:
 
     lista = lista + [item]
 
-randomIndex = random.randint(1, (len(lista) - 1))
+while True:
+    randomIndex = random.randint(0, (len(lista) - 1))
+    randomItem = lista[randomIndex]
 
-randomItem = lista[randomIndex]
+    print('La opción, elegida al azar, es:')
+    print(randomItem)
 
-print(randomItem)
+    print('\n¿Desea obtener otra opción aletoria? -1.si   0.no-')
+    res = input()
+
+    if res == '0':
+        break
+
+print('¡Gracias!')
