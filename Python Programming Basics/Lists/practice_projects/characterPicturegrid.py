@@ -8,8 +8,10 @@ def heart(pattern):
     print('\n')
     for y in range(tamY):
         for x in range(tamX):
-            print(pattern[(-1) * (x + 1)][y], end='')
-        print('\n')
+            if x < tamX - 1:
+                print(pattern[(-1) * (x + 1)][y], end='')
+            elif x == tamX - 1:
+                print(pattern[(-1) * (x + 1)][y])
 
 
 #forma
