@@ -8,4 +8,15 @@ def displayInventory(inventory):
         item_total += v
     print("Total number of items: " + str(item_total))
 
-displayInventory(stuff)
+# main
+print('Digite la opción de su preferencia:')
+print('1. Añadir nuevos keys')
+print('2. Aumentar los valores de keys existentes')
+print('3. Disminuir los valores de keys existentes')
+print('4. Ver el inventario total')
+op = input()
+
+if str(op) == '1':
+    print(op)
+elif str(op) == '4':
+    displayInventory(stuff)
