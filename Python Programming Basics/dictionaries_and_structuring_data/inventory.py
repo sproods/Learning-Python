@@ -16,6 +16,16 @@ def newKey(inventory):
     value = input()
     inventory.setdefault(key, int(value))
 
+# Función que realiza la adición de valores para los componentes que ya existen en el arreglo
+def addValues(inventory):
+    print('Digite el nombre del key:')
+    key = input()
+    if key in inventory:
+        print('Digite la cantidad de elementos que va a aumentar para ' + key + ':')
+        value = input()
+        inventory[key] += int(value)
+    elif key not in inventory:
+        print('El item ' + key + ' no está en el inventario')
 # main
 while True:
     print('Digite la opción de su preferencia:')
@@ -40,4 +50,3 @@ while True:
     if op2 == 'n':
         print('Gracias por sus consultas!')
         break
-
