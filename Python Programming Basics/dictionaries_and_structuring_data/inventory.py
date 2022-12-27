@@ -26,6 +26,21 @@ def addValues(inventory):
         inventory[key] += int(value)
     elif key not in inventory:
         print('El item ' + key + ' no está en el inventario')
+
+# Función que realiza la sustracción de los valores para un key ya existente
+def quitValues(inventory):
+    print('Digite el nombre del key:')
+    key = input()
+    if key in inventory:
+        print('Digite la cantidad de elementos que va a quitar para ' + key + ':')
+        value = input()
+        if int(value) <= inventory[key]:
+            inventory[key] -= value
+        else:
+            inventory[key] = 0
+    else:
+        print(str(inventory.get(key, 'No hay ese item \"' + key + '\" en el inventario')))
+
 # main
 while True:
     print('Digite la opción de su preferencia:')
