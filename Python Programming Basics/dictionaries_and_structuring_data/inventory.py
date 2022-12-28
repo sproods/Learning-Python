@@ -41,6 +41,17 @@ def quitValues(inventory):
     else:
         print(str(inventory.get(key, 'No hay ese item \"' + key + '\" en el inventario')))
 
+# Función que escribe los keys del inventario principal en una lista
+def listaInventory(inventory):
+    keysLista = []
+    for k in inventory.keys():
+        keysLista.append(k)
+    print('Los elementos del inventario son:')
+    
+    for i in keysLista:
+        print(i)
+    print('\n')
+
 # main
 while True:
     print('Digite la opción de su preferencia:')
@@ -63,5 +74,6 @@ while True:
     op2 = input()
 
     if op2 == 'n':
+        listaInventory(stuff)
         print('Gracias por sus consultas!')
         break
